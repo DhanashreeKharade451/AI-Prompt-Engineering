@@ -1,15 +1,20 @@
 import pandas as pd
 
 # Load dataset
-df = pd.read_csv("../data/healthcare-ai-project/data/Test_Inpatientdata-1542969243754.csv")
+df = pd.read_csv("../data/Test_Inpatientdata-1542969243754.csv")
 
-# Display first 5 rows
+# View data
 print(df.head())
-
-# Dataset information
 print(df.info())
-
-# Statistical summary
 print(df.describe())
 
-#
+# Missing values before cleaning
+print("\nMissing Values:")
+print(df.isnull().sum())
+
+# Remove duplicate rows
+print("after Dropping duplicate records")
+print(df.drop_duplicates(inplace=True))
+
+# Create features:
+df["claim_per_day"] = df["ClaimAmount"] / df["DaysAdmitted"]

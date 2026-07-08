@@ -5,7 +5,7 @@ from nltk.stem import PorterStemmer
 from nltk.stem import WordNetLemmatizer
 
 
-# Sample email content for lemmatization
+# Sample email content for 
 
 email_content_lemma = "The team members are working on their tasks diligently. Please ensure that every report is submitted promptly."
 
@@ -21,7 +21,7 @@ lemmatizer = WordNetLemmatizer()
 # Apply lemmatization to each word in the email content
 
 lemmatized_words = [lemmatizer.lemmatize(word) for word in nltk.word_tokenize(email_content_lemma)]
-
+lemmatization
 
 # Print the original and lemmatized text
 
